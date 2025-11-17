@@ -8,4 +8,3 @@
 # 4. Set the downscale stabilization window to 30 seconds
 
 # Video Link
-https://youtu.be/X0ISIy9Bd7U?si=h-GydG4EzPTug6Jt

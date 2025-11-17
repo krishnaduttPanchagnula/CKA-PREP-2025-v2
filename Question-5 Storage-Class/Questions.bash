@@ -8,4 +8,3 @@
 # Do not modify any existing Deployments or PersistentVolumeClaims
 
 # Video link
-https://youtu.be/WmbIrlbqjPw?si=bYSf9dDtb4hIfKG4

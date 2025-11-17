@@ -9,4 +9,3 @@
 # 4. Save the generated YAML manifest to /root/argo-helm.yaml
 
 # Video link
-https://youtu.be/8GzJ-x9ffE0?si=7SCVm2JU7--Yrmte

@@ -13,4 +13,3 @@
 # Ensure the MariaDB Deployment is running and Stable
 
 #Video Link
-https://youtu.be/0h2Dik_OTvw?si=9hU6-xzCW7AUsmEj

@@ -7,4 +7,3 @@
 # 3. Configure the new Service to also expose the individual pods using NodePort
 
 # Video Link
-https://youtu.be/t1FxX3PmYDQ?si=ryASL-G9X2FCVApQ

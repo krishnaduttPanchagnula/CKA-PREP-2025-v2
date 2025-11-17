@@ -5,4 +5,3 @@
 # 2. Schedule a Pod on node01 adding the correct toleration to the spec so it can be deployed
 
 # Video Link
-https://youtu.be/oy6Mdqt1-jk

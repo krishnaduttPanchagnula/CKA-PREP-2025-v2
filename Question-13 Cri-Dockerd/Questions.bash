@@ -11,4 +11,3 @@
 # 4. Set net.netfilter.nf_conntrack_max to 131072
 
 # Video Link
-https://youtu.be/u3kUI9lFPWE?si=Pkq74-rfFEp6dmfd

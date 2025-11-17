@@ -6,4 +6,3 @@
 # Fix it
 
 # Video Link
-https://youtu.be/p1vNc1GacpI?si=lbUxoj5jOeruLy7B

@@ -12,4 +12,3 @@
     curl -vk --tlsv1.3 https://ckaquestion.k8s.local # should work
 
 # Video Link
-https://youtu.be/-6QTAhprvTo?si=Rx81y2lHvK2Y_jBF

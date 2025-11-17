@@ -12,4 +12,3 @@ curl NODEIP:NODEPORT/echo
 # pointing to example.org
 
 # Video Link
-https://youtu.be/mtORnV8AlI4?si=6fZq-yd8Sezg0a7v

@@ -11,4 +11,3 @@
 # After making the changes scale the deployment back to 3 replicas
 
 #Video link
-https://youtu.be/Hkl9XgMKxic?si=v9yI1Rz10DELN4Mf

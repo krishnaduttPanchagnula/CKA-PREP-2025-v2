@@ -7,4 +7,3 @@
 # You may use any output format that kubectl supports
 
 # Video Link
-https://youtu.be/SA1DzLQaDJs
