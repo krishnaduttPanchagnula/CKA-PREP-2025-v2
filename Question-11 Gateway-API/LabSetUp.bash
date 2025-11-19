@@ -7,11 +7,8 @@ echo "🚀 Setting up Kubernetes Gateway API migration lab..."
 echo "📦 Installing Gateway API CRDs..."
 kubectl apply -k "github.com/kubernetes-sigs/gateway-api/config/crd?ref=v1.1.0" >/dev/null
 
-# 2. Create the working namespace
-kubectl create ns web-app --dry-run=client -o yaml | kubectl apply -f -
-
-# 3. Deploy a simple nginx web app
-cat <<EOF | kubectl apply -n web-app -f -
+# 2. Deploy a simple nginx web app
+cat <<EOF | kubectl apply -f -
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -33,8 +30,8 @@ spec:
         - containerPort: 80
 EOF
 
-# 4. Create a service for the web app
-cat <<EOF | kubectl apply -n web-app -f -
+# 3. Create a service for the web app
+cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: Service
 metadata:
@@ -48,17 +45,17 @@ spec:
     targetPort: 80
 EOF
 
-# 5. Create a self-signed TLS certificate and secret
+# 4. Create a self-signed TLS certificate and secret
 echo "🔐 Creating TLS certificate..."
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
   -keyout tls.key -out tls.crt \
   -subj "/CN=gateway.web.k8s.local/O=web" >/dev/null 2>&1
 
-kubectl create secret tls web-tls --cert=tls.crt --key=tls.key -n web-app >/dev/null
+kubectl create secret tls web-tls --cert=tls.crt --key=tls.key >/dev/null
 rm -f tls.crt tls.key
 
-# 6. Create an existing Ingress resource (to migrate from)
-cat <<EOF | kubectl apply -n web-app -f -
+# 5. Create an existing Ingress resource (to migrate from)
+cat <<EOF | kubectl apply -f -
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -83,7 +80,7 @@ spec:
               number: 80
 EOF
 
-# 7. Create a working GatewayClass (using a mock nginx controller)
+# 6. Create a working GatewayClass (using a mock nginx controller)
 cat <<EOF | kubectl apply -f -
 apiVersion: gateway.networking.k8s.io/v1
 kind: GatewayClass
@@ -97,7 +94,6 @@ echo
 echo "✅ Gateway API lab setup complete!"
 echo
 echo "Resources created:"
-echo "  - Namespace: web-app"
 echo "  - Deployment: web-deployment"
 echo "  - Service: web-service"
 echo "  - Ingress: web"

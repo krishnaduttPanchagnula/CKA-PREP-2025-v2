@@ -1,9 +1,9 @@
 # Step 1
 # Verify secret and ingress exist and describe them
-k get secret -n web-app
-k describe secret -n web-app web-tls
-k get ingress -n web-app
-k describe ingress -n web-app web
+k get secret
+k describe secret web-tls
+k get ingress
+k describe ingress web
 
 # Step 2
 # Create the Gateway (use the docs)
@@ -13,7 +13,6 @@ apiVersion: gateway.networking.k8s.io/v1
 kind: Gateway
 metadata:
   name: web-gateway
-  namespace: web-app
 spec:
   gatewayClassName: nginx-class
   listeners:
@@ -29,7 +28,7 @@ spec:
 # Apply it
 k apply -f gw.yaml
 # Check it is there
-k get gateway -n web-app
+k get gateway
 
 # Step 3 create the HTTPRoute
 vi http.yaml
@@ -55,6 +54,6 @@ spec:
 k apply -f http.yaml
 
 # Check
-k describe gateway,httproute -n web-app
+k describe gateway,httproute
 
 # Check all fields match as expected. In the exam you may be given a curl to run to check this
