@@ -6,4 +6,4 @@
 # Custom Resource and save it to /root/subject.yaml
 # You may use any output format that kubectl supports
 
-# Video Link
+# Video Link - https://youtu.be/SA1DzLQaDJs
