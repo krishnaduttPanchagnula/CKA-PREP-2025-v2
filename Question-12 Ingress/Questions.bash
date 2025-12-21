@@ -2,7 +2,7 @@
 
 # Task
 # 1. Expose the existing deployment with a service called echo-service
-# using Service Port 8080 type=NodePort
+# using Service Port 8080 type=NodePort in echo-sound namespace.
 # 2. Create a new ingress resource named echo in the echo-sound namespace for http://example.org/echo
 # 3. The availability of the Service echo-service can be checked using the following command
 curl NODEIP:NODEPORT/echo
