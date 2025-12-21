@@ -1,3 +1,6 @@
+# Create namespace
+kubectl create namespace argocd
+
 # Add repo and template manifests (CRDs not installed)
 helm repo add argocd https://argoproj.github.io/argo-helm
 helm repo update
